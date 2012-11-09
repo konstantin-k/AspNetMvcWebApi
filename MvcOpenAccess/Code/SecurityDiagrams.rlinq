@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DomainModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="2.0.0.0" name="SecurityDiagrams" namespace="MvcOpenAccess" showPropertiesCompartment="true" xmlns="http://www.telerik.com/ORM">
+  <orm:orm name="SecurityDiagrams" backend="mssql" xmlns:orm="http://tempuri.org/ORM">
+    <orm:namespace name="MvcOpenAccess" default="true" />
+    <orm:schema schema="">
+      <orm:procedure name="GetUserRoles">
+        <orm:procedure-parameter name="userName" sql-type="varchar" length="50" scale="0" nullable="true" ado-type="StringVariableLength" mode="in" type="System.String" />
+        <orm:result-sets />
+      </orm:procedure>
+      <orm:procedure name="ValidateUsers">
+        <orm:procedure-parameter name="name" sql-type="nvarchar" length="50" scale="0" nullable="true" ado-type="UnicodeStringVariableLength" mode="in" type="System.String" />
+        <orm:procedure-parameter name="pass" sql-type="nvarchar" length="50" scale="0" nullable="true" ado-type="UnicodeStringVariableLength" mode="in" type="System.String" />
+        <orm:result-sets />
+      </orm:procedure>
+    </orm:schema>
+    <orm:relational-naming-settings>
+      <orm:remove-camel-case>False</orm:remove-camel-case>
+      <orm:source-strategy>Property</orm:source-strategy>
+    </orm:relational-naming-settings>
+  </orm:orm>
+  <ModelSettings xmlns="">
+    <AppConfigConnectionPropertyName>MyDatabaseConnection</AppConfigConnectionPropertyName>
+    <AppConfigConnectionString>data source=(LocalDB)\v11.0;attachdbfilename=D:\Projects\WebApi\MvcOpenAccess\MvcOpenAccess\App_Data\MyDatabase.mdf;integrated security=True</AppConfigConnectionString>
+    <InitialCatalog>MyDatabase</InitialCatalog>
+    <NamingSettings>
+      <ClassRules>
+        <CaseMode>PascalCase</CaseMode>
+        <PluralizationMode>Singularize</PluralizationMode>
+      </ClassRules>
+      <FieldRules>
+        <AddPrefix>_</AddPrefix>
+        <CaseMode>CamelCase</CaseMode>
+      </FieldRules>
+      <PropertyRules>
+        <CaseMode>PascalCase</CaseMode>
+      </PropertyRules>
+    </NamingSettings>
+    <CodeGenerationSettings>
+      <MappingDefinitionType>Xml</MappingDefinitionType>
+    </CodeGenerationSettings>
+    <SchemaUpdateSettings />
+    <BackendConfigurationSettings>
+      <BackendConfiguration>
+        <Backend>MsSql</Backend>
+        <ProviderName>System.Data.SqlClient</ProviderName>
+      </BackendConfiguration>
+    </BackendConfigurationSettings>
+  </ModelSettings>
+  <domainContext>
+    <domainModelHasDomainContext Id="31b53755-6efc-4dea-816d-9b59e5b346d3">
+      <domainContainer name="SecurityDiagrams" namespace="MvcOpenAccess" showPropertiesCompartment="true" />
+    </domainModelHasDomainContext>
+  </domainContext>
+  <domainMethods>
+    <domainModelHasDomainMethods Id="59f5332d-19e0-4929-9810-f6e80a8abc3c">
+      <domainMethod name="GetUserRoles" storedProcedureName="'GetUserRoles'">
+        <domainMethodReturnShape>
+          <domainMethodReferencesDomainMethodReturnShape Id="30b4dd81-d5d3-4b4c-a7ee-3e9cf0196cac">
+            <domainMethodReturnShapeMoniker name="/SecurityDiagrams/UserRole" />
+          </domainMethodReferencesDomainMethodReturnShape>
+        </domainMethodReturnShape>
+      </domainMethod>
+    </domainModelHasDomainMethods>
+    <domainModelHasDomainMethods Id="f078dd05-006d-434b-a600-412320448eac">
+      <domainMethod name="ValidateUsers" storedProcedureName="'ValidateUsers'">
+        <domainMethodReturnShape>
+          <domainMethodReferencesDomainMethodReturnShape Id="44542aaa-a93d-4a18-b9be-50d095db2733">
+            <domainMethodReturnShapeMoniker name="/SecurityDiagrams/Boolean" />
+          </domainMethodReferencesDomainMethodReturnShape>
+        </domainMethodReturnShape>
+      </domainMethod>
+    </domainModelHasDomainMethods>
+  </domainMethods>
+  <domainMethodReturnShapes>
+    <domainModelHasDomainMethodReturnShapes Id="e7558eb2-547d-43b4-89fc-a2ed4586dd4a">
+      <domainMethodReturnShape name="Void" showPropertiesCompartment="true" domainMethodType="Void" />
+    </domainModelHasDomainMethodReturnShapes>
+    <domainModelHasDomainMethodReturnShapes Id="57405236-dae5-4a37-8c70-4d66b8d98aec">
+      <domainMethodReturnShape name="UserRole" namespace="MvcOpenAccess" showPropertiesCompartment="true" domainMethodType="CustomShape">
+        <Property Id="764badaa-d46b-4abb-ac8c-e4da81e2f2d2" name="RoleName" type="System.String" label="RoleName : System.String" fieldName="_roleName" />
+      </domainMethodReturnShape>
+    </domainModelHasDomainMethodReturnShapes>
+    <domainModelHasDomainMethodReturnShapes Id="28b30247-d0a4-4a03-809b-87693f83a42a">
+      <domainMethodReturnShape name="String" namespace="System" showPropertiesCompartment="true" domainMethodType="PrimitiveType" />
+    </domainModelHasDomainMethodReturnShapes>
+    <domainModelHasDomainMethodReturnShapes Id="71f8fc4e-1f12-4b12-82f5-439e8164222a">
+      <domainMethodReturnShape name="Boolean" namespace="System" showPropertiesCompartment="true" domainMethodType="PrimitiveType" />
+    </domainModelHasDomainMethodReturnShapes>
+  </domainMethodReturnShapes>
+</DomainModel>

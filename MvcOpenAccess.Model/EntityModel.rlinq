@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DomainModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="2.0.0.0" name="EntityModel" namespace="MvcOpenAccess" showPropertiesCompartment="true" xmlns="http://www.telerik.com/ORM">
+  <orm:orm name="EntityModel" backend="mssql" xmlns:orm="http://tempuri.org/ORM">
+    <orm:namespace name="MvcOpenAccess" default="true">
+      <orm:class name="Car" uniqueId="32f43c17-02f6-47fa-81b9-8bae6aa7213f">
+        <orm:table name="Cars" />
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="_carId" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_carId" property="CarId" behavior="readwrite" uniqueId="f8feba89-6ee1-4b57-981d-7feb8f218064" type="System.Int32">
+          <orm:column name="CarId" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_model" property="Model" behavior="readwrite" uniqueId="7dfad0fa-8800-4f39-8abd-466c115573f8" type="System.String">
+          <orm:column name="Model" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_year" property="Year" behavior="readwrite" uniqueId="4d1cc953-8dce-42e5-839a-06789c8b7f3d" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="Year" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+      </orm:class>
+    </orm:namespace>
+    <orm:schema schema="">
+      <orm:table name="Cars">
+        <orm:column name="CarId" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="Model" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="Year" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+      </orm:table>
+    </orm:schema>
+    <orm:relational-naming-settings>
+      <orm:remove-camel-case>False</orm:remove-camel-case>
+      <orm:source-strategy>Property</orm:source-strategy>
+    </orm:relational-naming-settings>
+  </orm:orm>
+  <ModelSettings xmlns="">
+    <AppConfigConnectionPropertyName>MyDatabaseConnection</AppConfigConnectionPropertyName>
+    <AppConfigConnectionString>Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\Projects\WebApi\MvcOpenAccess\MvcOpenAccess\App_Data\MyDatabase.mdf;Integrated Security=True;Connect Timeout=30</AppConfigConnectionString>
+    <InitialCatalog>MyDatabase</InitialCatalog>
+    <NamingSettings>
+      <ClassRules>
+        <CaseMode>PascalCase</CaseMode>
+        <PluralizationMode>Singularize</PluralizationMode>
+      </ClassRules>
+      <FieldRules>
+        <AddPrefix>_</AddPrefix>
+        <CaseMode>CamelCase</CaseMode>
+      </FieldRules>
+      <PropertyRules>
+        <CaseMode>PascalCase</CaseMode>
+      </PropertyRules>
+    </NamingSettings>
+    <CodeGenerationSettings>
+      <MappingDefinitionType>Xml</MappingDefinitionType>
+    </CodeGenerationSettings>
+    <SchemaUpdateSettings />
+    <BackendConfigurationSettings>
+      <BackendConfiguration>
+        <Backend>MsSql</Backend>
+        <ProviderName>System.Data.SqlClient</ProviderName>
+      </BackendConfiguration>
+    </BackendConfigurationSettings>
+  </ModelSettings>
+  <Types>
+    <DomainClass Id="32f43c17-02f6-47fa-81b9-8bae6aa7213f" name="Car" namespace="MvcOpenAccess" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="f8feba89-6ee1-4b57-981d-7feb8f218064" name="CarId" type="Int32" label="CarId : Int32" kind="Persistent" identity="true" fieldName="_carId" />
+      <Property Id="7dfad0fa-8800-4f39-8abd-466c115573f8" name="Model" label="Model : String" kind="Persistent" fieldName="_model" />
+      <Property Id="4d1cc953-8dce-42e5-839a-06789c8b7f3d" name="Year" type="Int32" label="Year : Int32" nullable="true" kind="Persistent" fieldName="_year" />
+    </DomainClass>
+  </Types>
+  <domainContext>
+    <domainModelHasDomainContext Id="b4c73693-5a36-4a7b-b5cc-3b8c24b4a7a7">
+      <domainContainer name="EntityModel" namespace="MvcOpenAccess" showPropertiesCompartment="true">
+        <entitySetProperty name="Cars" namespace="MvcOpenAccess" type="Car" label="Cars : IQueryable&lt;MvcOpenAccess.Car&gt;" />
+      </domainContainer>
+    </domainModelHasDomainContext>
+  </domainContext>
+</DomainModel>

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI", "MvcOpenAccess\WebUI.csproj", "{F4FA54C9-1AAA-4446-BED3-4AC9BC2751AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcOpenAccess.Model", "MvcOpenAccess.Model\MvcOpenAccess.Model.csproj", "{2C3B2549-7F01-41F4-A5D5-1FA3A3698FB3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4FA54C9-1AAA-4446-BED3-4AC9BC2751AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4FA54C9-1AAA-4446-BED3-4AC9BC2751AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4FA54C9-1AAA-4446-BED3-4AC9BC2751AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4FA54C9-1AAA-4446-BED3-4AC9BC2751AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C3B2549-7F01-41F4-A5D5-1FA3A3698FB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C3B2549-7F01-41F4-A5D5-1FA3A3698FB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C3B2549-7F01-41F4-A5D5-1FA3A3698FB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C3B2549-7F01-41F4-A5D5-1FA3A3698FB3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

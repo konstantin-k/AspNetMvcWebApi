@@ -1,0 +1,13 @@
+<Modules>
+  <Module PersistentId="F4FA54C9-1AAA-4446-BED3-4AC9BC2751AA" ModuleId="MvcOpenAccess" />
+  <Module PersistentId="System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" ModuleId="System.Web.ApplicationServices" />
+  <Module PersistentId="System.Web.Providers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" ModuleId="System.Web.Providers" />
+  <Module PersistentId="System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" ModuleId="System.Web" />
+  <Module PersistentId="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" ModuleId="System.Web.Extensions" />
+  <Module PersistentId="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" ModuleId="System.Web.Http" />
+  <Module PersistentId="System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" ModuleId="System.Web_1" />
+  <Module PersistentId="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" ModuleId="System.Web.Mvc" />
+  <Module PersistentId="Telerik.OpenAccess.35.Extensions, Version=2012.3.1012.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342" ModuleId="Telerik.OpenAccess.35.Extensions" />
+  <Module PersistentId="Telerik.OpenAccess, Version=2012.3.1012.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342" ModuleId="Telerik.OpenAccess" />
+  <Module PersistentId="2C3B2549-7F01-41F4-A5D5-1FA3A3698FB3" ModuleId="MvcOpenAccess.Model" />
+</Modules>

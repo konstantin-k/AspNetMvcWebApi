@@ -1,0 +1,53 @@
+﻿@{
+	ViewBag.Title = "User cars";
+}
+
+<script src="~/Scripts/jquery-1.7.2.min.js"></script>
+<script src="~/Scripts/kendo/2012.2.710/kendo.web.min.js"></script>
+
+<script type="text/javascript">
+
+	$(document).ready(function () {
+		init();
+	});
+
+	function init() {
+		var carsData = new kendo.data.DataSource(
+			{
+				transport: {
+					read: {
+						url: "/api/cars/?model=all",
+						dataType: "json"
+					}
+				},
+				error: function(e) {
+					alert(e.status + ": " + e.errorThrown);
+				}
+			});
+		
+		var viewModel = kendo.observable({
+			carsDataSource: carsData,
+			find: function (e) {
+				var gridUrl = "/api/cars/?model=" + $('#carModel').val();
+				carsData.transport.options.read.url = gridUrl;
+				carsData.read();
+			}
+		});
+
+		kendo.bind($("#divContent"), viewModel);
+	}
+
+</script>
+
+<div class="main-content">
+	<div id="divContent">
+		<h1>Search for Cars</h1>
+		<label for="carModel">Model:</label>
+		<input type="text" id="carModel" />
+		<br />
+		<input type="button" value="Search" data-bind="click: find"/>
+		<div id="grid" data-role="grid" data-columns='["CarId", "Model", "Year"]' 
+			data-bind="source: carsDataSource">
+		</div>
+	</div>
+</div>
